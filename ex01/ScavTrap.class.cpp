@@ -28,7 +28,7 @@ void ScavTrap::attack(const std::string &target)
 	return ;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &src)
+ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src.name)
 {
 	std::cout << "Scav Trap Copy constructor called" << std::endl;
 	*this = src;
