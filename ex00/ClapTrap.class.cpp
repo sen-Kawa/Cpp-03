@@ -3,21 +3,61 @@
 void ClapTrap::attack(const std::string &target)
 {
 	std::cout << "Attack function called." << std::endl;
-	if (this->energyPoints == 0)
+
+	if (this->energyPoints <= 0 || this->hitPoints <= 0)
 	{
-		std::cout << "No energy points left to perfom attack." << std::endl;
+		std::cout
+		<< "Not enough points." << std::endl;
 		return ;
 	}
-	if (this->hitPoints == 0)
-	{
-		std::cout << "No hit points left to perfom attack." << std::endl;
-		return ;
-	}
+
 	std::cout
 	<< "ClapTrap " << this->name << " attacks " << target
 	<< ", causing " << this->attackDamage << " points of damage."
 	<< std::endl;
 	this->energyPoints--;
+
+	return ;
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	if (this->energyPoints <= 0 || this->hitPoints <= 0)
+	{
+		std::cout
+		<< "Not enough points." << std::endl;
+		return ;
+	}
+
+	std::cout
+	<< "Take damage of " << amount << " points." << std::endl;
+
+	this->hitPoints = this->hitPoints - amount;
+
+	if (this->hitPoints <= 0)
+	{
+		std::cout
+		<< "ClapTrap " << this->name << " died."
+		<< std::endl;
+	}
+	return ;
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	if (this->energyPoints <= 0 || this->hitPoints <= 0)
+	{
+		std::cout
+		<< "Not enough points." << std::endl;
+		return ;
+	}
+
+	std::cout
+	<< "Is repared with " << amount << " points." << std::endl;
+
+	this->hitPoints = this->hitPoints + amount;
+	this->energyPoints--;
+
 	return ;
 }
 
