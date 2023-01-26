@@ -12,7 +12,7 @@ int main (void)
 	inst.attack("Jim");
 	inst.attack("Jim");
 	inst.takeDamage(5);
-	inst.takeDamage(5);
+	inst.beRepaired(5);
 	inst.attack("Jim");
 	inst.attack("Jim");
 	inst.attack("Jim");
