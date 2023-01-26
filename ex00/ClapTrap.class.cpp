@@ -45,7 +45,7 @@ ClapTrap::ClapTrap(ClapTrap const &src)
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name)
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "Constructor called" << std::endl;
 	return ;
@@ -54,6 +54,10 @@ ClapTrap::ClapTrap(std::string name) : name(name)
 ClapTrap::ClapTrap(void)
 {
 	std::cout << "Constructor called" << std::endl;
+	this->name = "Default";
+	this->attackDamage = 0;
+	this->hitPoints = 10;
+	this->energyPoints = 10;
 	return ;
 }
 
