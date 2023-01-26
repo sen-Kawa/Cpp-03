@@ -8,4 +8,4 @@ About the syntax:
 
 Compilation:
 - make
--Compiling with -Wall -Wextra -Werror and -std=c++98
+- Compiling with -Wall -Wextra -Werror and -std=c++98
