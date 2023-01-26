@@ -12,10 +12,12 @@ class ScavTrap : public ClapTrap
 	public:
 
 		void	attack(const std::string& target);
+		void	guardGate(void);
 
 		ScavTrap &	operator=(ScavTrap const &assign);
 
 		ScavTrap(void);
+		ScavTrap(std::string name);
 		ScavTrap(ScavTrap const &src);
 		~ScavTrap(void);
 
