@@ -14,15 +14,17 @@ class ClapTrap
 
 	public:
 
-		int		getClapTrap(void) const;
-		void	attack(const std::string& target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+
+		void		attack(const std::string& target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
 		
-		ClapTrap &	operator=(ClapTrap const &assign);
+		std::string	getClapTrap(void) const;
 
 		ClapTrap(void);
+		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &src);
+		ClapTrap &	operator=(ClapTrap const &assign);
 		~ClapTrap(void);
 
 };
