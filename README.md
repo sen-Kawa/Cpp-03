@@ -1,6 +1,6 @@
 # C++ Module 03
 
-Inheritance in C++
+## Inheritance in C++
 
 About the syntax:
 - Classes designed in the Orthodox Canonical Form.
